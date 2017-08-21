@@ -17,7 +17,7 @@ public class LogAnalyzerTest {
         ILogAnalyzer logAnalyzer =
                 new LogAnalyzer(
                         new LogAnalyzerParameters(
-                                new File(getClass().getClassLoader().getResource("test.log").getFile()),
+                                new File(getClass().getClassLoader().getResource("testLog.txt").getFile()),
                                 new File(getClass().getClassLoader().getResource("parameters/1pattern.txt").getFile()))
         );
         logAnalyzer.analyze();
@@ -39,7 +39,7 @@ public class LogAnalyzerTest {
         ILogAnalyzer logAnalyzer =
                 new LogAnalyzer(
                         new LogAnalyzerParameters(
-                                new File(getClass().getClassLoader().getResource("test.log").getFile()),
+                                new File(getClass().getClassLoader().getResource("testLog.txt").getFile()),
                                 new File(getClass().getClassLoader().getResource("parameters/2pattern.txt").getFile()))
         );
         logAnalyzer.analyze();
