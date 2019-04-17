@@ -36,11 +36,7 @@ public class LogAnalyzer implements ILogAnalyzer {
     public void init() throws IOException, LogAnalyzerValidationException {
         parameters.init();
         for (Pattern pattern : parameters.getPatterns()) {
-            /*String created by 'new' operator (in Files.readAllLines).
-            Keys in map check by 'equals' method, but 'new' String not contains in StringPool.
-            And we can not use it like map`s key.
-            So put 'pattern name' to StringPool by 'intern' method*/
-            resultMap.put(pattern.pattern().intern(), new HashMap<>());
+            resultMap.put(pattern.pattern(), new HashMap<>());
         }
     }
 
